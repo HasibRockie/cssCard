@@ -1,0 +1,317 @@
+/* font-family: 'Orbitron', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+body{
+    margin: 0 auto;
+    /* padding: 0%; */
+    padding-top: 5%;
+    justify-content: center;
+    background-color: rgba(14, 14, 14, 1.6);
+    /* background-image: url(img3.png); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position:top right;
+    /* filter: blur(2px); */
+    opacity: 1.2;
+}
+
+.container .front{
+    position: absolute;
+    z-index: 5;
+    /* padding: 15px 5%; */
+    height: 280px;
+    width: 430px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 10px 5px 20px rgba(134, 134, 134, 0.3) ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 2s;
+    border: 1px solid white;
+}
+
+.container .back{
+    position: absolute;
+    z-index: 0;
+    /* padding: 15px 5%; */
+    height: 280px;
+    width: 430px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 10px 5px 20px rgba(134, 134, 134, 0.3) ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 2s;
+    border: 1px solid white;
+}
+
+
+.container{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5% 33%;
+    padding-left: 30px;
+    /* height: 700px; */
+}
+.container::before{
+    content:'';
+    position: absolute;
+    bottom: -400px;
+    right: 10px;
+    background: linear-gradient(rgb(0, 4, 255),rgb(15, 214, 165));
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    filter: blur(5px);
+    overflow: hidden;
+}
+
+.container::after{
+    content:'';
+    position: absolute;
+    bottom: -30px;
+    left:0%;
+    background: linear-gradient(rgb(151, 74, 46),rgb(194, 42, 42));
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+.credit{
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    justify-content: left;
+    color: rgba(255, 255, 255,0.7);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.credit2{
+    position: absolute;
+    right: 25px;
+    top: 45px;
+    justify-content: left;
+    color: rgba(255, 255, 255,0.6);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+#cardno{
+    position: absolute;
+    color: white;
+    left: 35px;
+    top: 130px;
+    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+
+img{
+    position: absolute;
+    height: 60px;
+    left: 45px;
+    top: 60px;
+
+}
+
+h4{
+    color: rgb(151, 149, 149);
+    position: absolute;
+    top: 165px;
+    left: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+}
+
+.holder{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 30px;
+    bottom: 5px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+}
+
+.container .back .content .strip{
+    position: absolute;
+    top: 10%;
+    height: 50px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: rgb(41, 41, 41);
+}
+
+.descrip{
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    padding: 0 20px;
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+}
+
+.auth{
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+.cvvstrip{
+    position: absolute;
+    top:130px;
+    background-color: whitesmoke;
+    height: 40px;
+    width: 82%;
+}
+
+#cvv{
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top:125px;
+    right: 20px;
+    font-size: 0.9rem;
+    background-color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.container:hover .card.front{
+    transform: rotateY(180deg);
+}
+
+.container .card.back{
+    transform: rotateY(180deg);
+}
+
+.container:hover .card.back{
+    transform: rotateY(360deg);
+}
+
+.card{
+    backface-visibility: hidden;
+}
+
+
+.bubble{
+    position: absolute;
+    right: 40px;
+    top: 400px;
+    height:200px;
+    width:200px;
+    background:linear-gradient(rgb(235, 220, 13),rgb(184, 218, 207));
+    border-radius: 100%;
+    filter: blur(3px);
+}
+
+.bubble::before{
+    content: '';
+    position: absolute;
+    right: 50px;
+    top: -400px;
+    height:80px;
+    width:80px;
+    background:linear-gradient(#999,rgb(150, 255, 51));
+    border-radius: 100%;
+    filter: blur(3px);
+}
+
+
+.bubble::after{
+    content: '';
+    position: absolute;
+    left: -1000px;
+    top: -350px;
+    height:80px;
+    width:80px;
+    background:linear-gradient(rgb(136, 105, 105),rgb(223, 176, 202));
+    border-radius: 100%;
+    filter: blur(1px);
+}
+
+.bubble2{
+    position: absolute;
+    right: 280px;
+    top: 300px;
+    /* left: 250px; */
+    height: 70px;
+    width: 70px;
+    opacity: 0.4;
+    transform: rotate(12deg);
+    filter: blur(3px);
+    background:linear-gradient(rgb(2, 158, 41),rgb(102, 245, 178));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+
+.bubble3{
+    position: absolute;
+    left: 300px;
+    top: 170px;
+    height: 50px;
+    width: 50px;
+    opacity: 0.7;
+    background:linear-gradient(rgb(238, 39, 188),rgb(235, 109, 109));
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(35deg);
+    filter: blur(25px);
+}
+
+
+.bubble4{
+    position: absolute;
+    left: 700px;
+    bottom: 100px;
+    height: 50px;
+    width: 50px;
+    opacity: 0.7;
+    background:linear-gradient(rgb(16, 3, 70),rgb(52, 128, 243));
+
+    transform: rotate(15deg);
+    filter: blur(25px);
+    clip-path: polygon(35% 0%,65% 0%,65% 35%,100% 35%,100% 60%,65% 60%,65% 100%,35% 100%,35% 60%,0% 60%,0% 35%,35% 35%);
+
+}
+
+
+.bubble1{
+    position: absolute;
+    left: 900px;
+    top: 100px;
+    height: 30px;
+    width: 30px;
+    opacity: 0.9;
+    background:linear-gradient(rgb(255, 255, 255),rgb(8, 173, 179));
+
+    transform: rotate(15deg);
+    filter: blur(25px);
+    clip-path: ellipse(45% 45% at 50% 50%);
+}
+
+
